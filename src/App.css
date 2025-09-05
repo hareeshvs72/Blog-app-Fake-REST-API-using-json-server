@@ -1,0 +1,10 @@
+#description{
+    border: 2px solid rgb(217, 217, 234);
+    min-height: 150px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    outline: none;
+}
+#description:focus{
+    outline: 1px solid blue;
+}
