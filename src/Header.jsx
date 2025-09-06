@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
+import Create from './component/Create';
 
 
 function Header() {
@@ -23,10 +25,12 @@ function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Blog
-          </Typography>
-          <Button color="inherit">Create</Button>
+          
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+             <Link to={'/'} className='text-light text-decoration-none'>  Blog</Link>
+            </Typography>
+         
+          <Link to={'/create'}>  <Button color="inherit" className='text-light'>Create </Button></Link>
         </Toolbar>
       </AppBar>
     </Box>

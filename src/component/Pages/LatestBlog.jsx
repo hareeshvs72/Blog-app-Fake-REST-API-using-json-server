@@ -1,23 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { showBlogInLand } from '../../service/AllApi'
 
 function LatestBlog() {
+   const[post, setPost]= useState([{}])
+  useEffect( ()=>{
+      getData()    
+  },[])
+ 
+  const getData = async ()=>{
+        const respons = await showBlogInLand()
+        //  console.log(respons.data);
+         setPost(respons.data)
+  }
+  console.log(post);
+  
+
   return (
     <>
       <div className='container'>
         <h1>Latest Blog</h1>
         <div className="row">
-          <div className="col-md-3 my-2">
-
+                
+           
+          {
+            post!={} &&
+            post.map((item,index)=>(
+               <div className="col-md-3 my-2">
             <div className="card" style={{width:"18rem" }}>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqur8ZPKPFMobCjSBJN7dOcn-fn8SRjVnreg&s" className="card-img-top" alt="..."/>
+              <img src={item.imgurl}className="card-img-top" alt="..."/>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                  <a href="#" className="text-primary ">tags</a>
+                  <h5 className="card-title">{item.title}</h5>
+                  <p className="card-text">{item.discription}</p>
+                  <a href="#" className="text-primary ">{item.tags}</a>
                 </div>
             </div>
-
-          </div>
+            </div>
+            )) 
+             
+            }
+          
+          
         
         </div>
       </div>

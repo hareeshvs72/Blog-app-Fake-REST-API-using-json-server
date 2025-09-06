@@ -1,6 +1,6 @@
-import axios from "axios"
+import axios from 'axios'
 
-const CommonAPI = async (httpreq,url , reqbody)=>{
+const CommonAPI = async (httpreq, url , reqbody)=>{
  const reqConfiq = {
     method:httpreq,
     url,

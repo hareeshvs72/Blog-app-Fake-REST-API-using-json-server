@@ -39,9 +39,9 @@ function Footer() {
               <div>
                 <h3>Newsletter</h3>
                 <p className='text-primary'>Enter your email address</p>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                  <button class="btn btn-outline-primary btn-primary text-light" type="submit">Search</button>
+                <form className="d-flex" role="search">
+                  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                  <button className="btn btn-outline-primary btn-primary text-light" type="submit">Search</button>
                 </form>
               </div>
             </div>
