@@ -14,3 +14,19 @@ export const addBlogToJson = async  (blog)=>{
 export const showBlogInLand = async ()=>{
     return await CommonAPI("GET",`${BASEURL}/blog`,{})
 }
+
+// get data 
+
+export const getDataInPreview =async (id)=>{
+    return await CommonAPI("GET",`${BASEURL}/blog/${id}`,{})
+}
+
+// updatedata
+
+export const updateData =async (id,post)=>{
+    return await CommonAPI("PUT",`${BASEURL}/blog/${id}`,post)
+}
+
+export const deleteData = async(id)=>{
+      return await CommonAPI("DELETE",`${BASEURL}/blog/${id}`,{})
+}

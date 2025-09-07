@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import Create from './component/Create';
+import { useState } from 'react';
 
 
 function Header() {
@@ -30,7 +31,10 @@ function Header() {
              <Link to={'/'} className='text-light text-decoration-none'>  Blog</Link>
             </Typography>
          
-          <Link to={'/create'}>  <Button color="inherit" className='text-light'>Create </Button></Link>
+     
+  
+            <Link  to={'/create'}>  <Button color="inherit" className='text-light'>Create </Button></Link>
+            
         </Toolbar>
       </AppBar>
     </Box>

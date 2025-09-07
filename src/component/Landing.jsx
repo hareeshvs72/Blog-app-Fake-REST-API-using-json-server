@@ -5,11 +5,11 @@ import Headeing from './Pages/Headeing'
 import LatestBlog from './Pages/LatestBlog'
 
 
-function Landing() {
+function Landing({setBlogId,blogid}) {
   return (
     <>
      <Headeing/>
-      <LatestBlog/>
+      <LatestBlog  blogid={blogid} setBlogId={setBlogId}/>
     </>
   )
 }
